@@ -1,0 +1,56 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce solution with user authentication, product management, and payment integration. Built with modern web technologies for optimal performance.',
+    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    githubUrl: 'https://github.com/yourusername/ecommerce',
+    demoUrl: 'https://demo.example.com',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+  },
+  {
+    id: 2,
+    title: 'Task Management App',
+    description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+    techStack: ['React', 'TypeScript', 'Firebase', 'TailwindCSS'],
+    githubUrl: 'https://github.com/yourusername/taskapp',
+    demoUrl: 'https://tasks.example.com',
+    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop',
+    youtubeVideoId: 'dQw4w9WgXcQ', // Replace with actual video ID
+  },
+  {
+    id: 3,
+    title: 'Weather Dashboard',
+    description: 'A beautiful weather dashboard that displays current conditions and forecasts for multiple locations with interactive maps and charts.',
+    techStack: ['Vue.js', 'Chart.js', 'OpenWeather API'],
+    githubUrl: 'https://github.com/yourusername/weather',
+    demoUrl: 'https://weather.example.com',
+    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
+  },
+  {
+    id: 4,
+    title: 'Social Media Analytics',
+    description: 'Analytics dashboard for tracking social media performance with detailed insights, engagement metrics, and visualizations.',
+    techStack: ['Next.js', 'Python', 'PostgreSQL', 'D3.js'],
+    githubUrl: 'https://github.com/yourusername/analytics',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+  },
+  {
+    id: 5,
+    title: 'Portfolio Website',
+    description: 'A modern, responsive portfolio website showcasing projects, skills, and experiences with smooth animations and clean design.',
+    techStack: ['React', 'TailwindCSS', 'Framer Motion'],
+    githubUrl: 'https://github.com/yourusername/portfolio',
+    demoUrl: 'https://portfolio.example.com',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop',
+  },
+  {
+    id: 6,
+    title: 'Mobile Fitness App',
+    description: 'A cross-platform mobile application for tracking workouts, nutrition, and fitness goals with personalized recommendations.',
+    techStack: ['React Native', 'Firebase', 'Redux'],
+    githubUrl: 'https://github.com/yourusername/fitness',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
+  },
+];
+
