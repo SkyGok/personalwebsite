@@ -9,12 +9,10 @@ import ProjectDetail from './pages/ProjectDetail';
 import Contact from './pages/Contact';
 
 function App() {
-  // Only use basename in production (GitHub Pages)
-  const basename = import.meta.env.PROD ? '/personalwebsite' : '';
-  
+  // No basename needed for custom domain
   return (
     <LanguageProvider>
-      <Router basename={basename}>
+      <Router>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">
