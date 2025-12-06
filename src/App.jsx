@@ -11,7 +11,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename="/personalwebsite">
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">
