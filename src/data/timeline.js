@@ -29,10 +29,4 @@ export const timelineItems = [
     subtitle: 'Bursa Uludağ University',
     description: 'Pursuing Bachelor\'s degree in Mechanical Engineering with focus on robotics, automation, and software integration.',
   },
-  {
-    date: '2016 - 2020',
-    title: 'High School Diploma',
-    subtitle: 'Private Tan Anatolian High School',
-    description: 'Graduated with GPA: 93.75/100',
-  },
 ];

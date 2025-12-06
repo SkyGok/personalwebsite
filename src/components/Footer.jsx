@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -25,22 +29,22 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-              Quick Links
+              {t.footer.quickLinks}
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-gray-600 hover:text-primary-600 text-sm transition-colors">
-                  About
+                  {t.nav.about}
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="text-gray-600 hover:text-primary-600 text-sm transition-colors">
-                  Projects
+                  {t.nav.projects}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-600 hover:text-primary-600 text-sm transition-colors">
-                  Contact
+                  {t.nav.contact}
                 </Link>
               </li>
             </ul>
@@ -49,7 +53,7 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-              Connect
+              {t.footer.connect}
             </h4>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -78,7 +82,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-sm text-gray-600">
-            © {currentYear} Portfolio. All rights reserved.
+            © {currentYear} Portfolio. {t.footer.rights}
           </p>
         </div>
       </div>

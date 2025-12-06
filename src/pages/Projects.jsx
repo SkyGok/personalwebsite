@@ -4,8 +4,12 @@ import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 const Projects = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const [filter, setFilter] = useState('All');
 
   // Extract unique tech stacks for filtering
@@ -26,11 +30,10 @@ const Projects = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            My Projects
+            {t.projects.title}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A collection of projects I've built, ranging from web applications to mobile apps.
-            Each project represents a unique challenge and learning experience.
+            {t.projects.subtitle}
           </p>
         </motion.div>
 
@@ -60,7 +63,7 @@ const Projects = () => {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-600">No projects found with this filter.</p>
+            <p className="text-gray-600">{t.projects.noProjects}</p>
           </div>
         )}
       </Section>

@@ -2,7 +2,10 @@ export const projects = [
   {
     id: 1,
     title: 'ULUROVER - Autonomous Rover',
-    description: 'Autonomous rover with SLAM-based navigation using ROS, LiDAR, and stereo vision.',
+    description: {
+      en: 'Autonomous rover with SLAM-based navigation using ROS, LiDAR, and stereo vision.',
+      tr: 'ROS, LiDAR ve stereo görüş kullanarak SLAM tabanlı navigasyonlu otonom rover.',
+    },
     techStack: ['ROS', 'SLAM', 'LiDAR', 'Python', 'C++'],
     image: '/media/rover/20250910_19h04m29s_grim.png',
     youtubeVideoId: '5kewE-v_1M8',
@@ -10,21 +13,30 @@ export const projects = [
   {
     id: 2,
     title: 'UNIMAK Machine',
-    description: 'Machine design and control systems project.',
+    description: {
+      en: 'Machine design and control systems project.',
+      tr: 'Makine tasarımı ve kontrol sistemleri projesi.',
+    },
     techStack: ['Mechanical Design', 'Control Systems'],
     image: '/media/unimak/20251110_20h16m12s_grim.png',
   },
   {
     id: 3,
     title: 'Product Manufacturing Check',
-    description: 'Manufacturing quality control and inspection system.',
+    description: {
+      en: 'Manufacturing quality control and inspection system.',
+      tr: 'Üretim kalite kontrolü ve muayene sistemi.',
+    },
     techStack: ['Manufacturing', 'Quality Control'],
     image: '/media/product-manufacturing-check/20251110_20h29m42s_grim.png',
   },
   {
     id: 4,
     title: 'N8N Automation Dashboard',
-    description: 'Automation dashboard built with N8N workflow automation.',
+    description: {
+      en: 'Automation dashboard built with N8N workflow automation.',
+      tr: 'N8N iş akışı otomasyonu ile oluşturulmuş otomasyon kontrol paneli.',
+    },
     techStack: ['N8N', 'Automation', 'Dashboard'],
     image: '/media/project-n8n-automation-dashboard/20251123_03h13m01s_grim.png',
   },

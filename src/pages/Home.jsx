@@ -2,8 +2,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import { projects } from '../data/projects';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 const Home = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const featuredProjects = projects.slice(0, 3);
 
   return (
@@ -25,27 +29,26 @@ const Home = () => {
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-              Hi, I'm <span className="text-primary-600">Gökhan Dülger</span>
+              {t.home.title} <span className="text-primary-600">Gökhan Dülger</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-6">
-              Project Engineer | Mechanical Engineer
+              {t.home.subtitle}
             </p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Multidisciplinary Engineer with a strong foundation in mechanical design, software development, and emerging technologies. 
-              Experienced in leading complex projects from concept to implementation, combining analytical problem-solving with hands-on technical expertise.
+              {t.home.bio}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/projects"
                 className="px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
               >
-                View My Work
+                {t.home.viewWork}
               </Link>
               <Link
                 to="/contact"
                 className="px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-medium hover:bg-primary-50 transition-colors"
               >
-                Get In Touch
+                {t.home.getInTouch}
               </Link>
             </div>
           </motion.div>
@@ -54,8 +57,8 @@ const Home = () => {
 
       {/* Featured Projects */}
       <Section
-        title="Featured Projects"
-        subtitle="A selection of my recent work"
+        title={t.home.featuredProjects}
+        subtitle={t.home.featuredSubtitle}
         className="bg-gray-50"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -82,13 +85,13 @@ const Home = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm">
-                  {project.description}
+                  {project.description[language] || project.description}
                 </p>
                 <Link
                   to={`/projects/${project.id}`}
                   className="text-primary-600 hover:text-primary-700 font-medium text-sm"
                 >
-                  Learn more →
+                  {t.home.learnMore} →
                 </Link>
               </div>
             </motion.div>
@@ -99,13 +102,13 @@ const Home = () => {
             to="/projects"
             className="inline-block px-6 py-3 text-primary-600 hover:text-primary-700 font-medium"
           >
-            View All Projects →
+            {t.home.viewAllProjects} →
           </Link>
         </div>
       </Section>
 
       {/* Skills Section */}
-      <Section title="Skills & Technologies">
+      <Section title={t.home.skills}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             'ROS',

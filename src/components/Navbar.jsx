@@ -1,16 +1,20 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/', label: t.nav.home },
+    { path: '/about', label: t.nav.about },
+    { path: '/projects', label: t.nav.projects },
+    { path: '/contact', label: t.nav.contact },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -53,6 +57,14 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
+            {/* Language Selector */}
+            <button
+              onClick={toggleLanguage}
+              className="ml-4 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
+              aria-label="Toggle language"
+            >
+              {language === 'en' ? 'TR' : 'EN'}
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -101,6 +113,13 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            {/* Language Selector Mobile */}
+            <button
+              onClick={toggleLanguage}
+              className="block w-full text-left px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+            >
+              {language === 'en' ? 'TR' : 'EN'}
+            </button>
           </motion.div>
         )}
       </div>
