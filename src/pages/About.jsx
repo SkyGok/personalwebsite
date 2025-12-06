@@ -4,6 +4,7 @@ import Timeline from '../components/Timeline';
 import { timelineItems } from '../data/timeline';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { getAssetPath } from '../utils/paths';
 
 const About = () => {
   const { language } = useLanguage();
@@ -21,7 +22,7 @@ const About = () => {
           >
             <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden shadow-xl">
               <img
-                src="/media/pictur-gokhan.jpg"
+                src={getAssetPath('media/pictur-gokhan.jpg')}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />

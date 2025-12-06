@@ -4,6 +4,7 @@ import Section from '../components/Section';
 import { projects } from '../data/projects';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { getAssetPath } from '../utils/paths';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -23,7 +24,7 @@ const Home = () => {
           >
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden shadow-xl">
               <img
-                src="/media/pictur-gokhan.jpg"
+                src={getAssetPath('media/pictur-gokhan.jpg')}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />

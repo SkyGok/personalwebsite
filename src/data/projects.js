@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/paths';
+
 export const projects = [
   {
     id: 1,
@@ -7,7 +9,7 @@ export const projects = [
       tr: 'ROS, LiDAR ve stereo görüş kullanarak SLAM tabanlı navigasyonlu otonom rover.',
     },
     techStack: ['ROS', 'SLAM', 'LiDAR', 'Python', 'C++'],
-    image: '/media/rover/20250910_19h04m29s_grim.png',
+    image: getAssetPath('media/rover/20250910_19h04m29s_grim.png'),
     youtubeVideoId: '5kewE-v_1M8',
   },
   {
@@ -18,7 +20,7 @@ export const projects = [
       tr: 'Makine tasarımı ve kontrol sistemleri projesi.',
     },
     techStack: ['Mechanical Design', 'Control Systems'],
-    image: '/media/unimak/20251110_20h16m12s_grim.png',
+    image: getAssetPath('media/unimak/20251110_20h16m12s_grim.png'),
   },
   {
     id: 3,
@@ -28,7 +30,7 @@ export const projects = [
       tr: 'Üretim kalite kontrolü ve muayene sistemi.',
     },
     techStack: ['Manufacturing', 'Quality Control'],
-    image: '/media/product-manufacturing-check/20251110_20h29m42s_grim.png',
+    image: getAssetPath('media/product-manufacturing-check/20251110_20h29m42s_grim.png'),
   },
   {
     id: 4,
@@ -38,7 +40,7 @@ export const projects = [
       tr: 'N8N iş akışı otomasyonu ile oluşturulmuş otomasyon kontrol paneli.',
     },
     techStack: ['N8N', 'Automation', 'Dashboard'],
-    image: '/media/project-n8n-automation-dashboard/20251123_03h13m01s_grim.png',
+    image: getAssetPath('media/project-n8n-automation-dashboard/20251123_03h13m01s_grim.png'),
   },
 ];
 
