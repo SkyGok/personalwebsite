@@ -10,8 +10,6 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/projects', label: 'Projects' },
-    { path: '/writing', label: 'Writing' },
-    { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact' },
   ];
 
@@ -28,7 +26,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent"
             >
-              Portfolio
+              Gökhan Dülger
             </motion.div>
           </Link>
 

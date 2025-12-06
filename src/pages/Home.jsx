@@ -19,20 +19,20 @@ const Home = () => {
           >
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                src="/media/pictur-gokhan.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-              Hi, I'm <span className="text-primary-600">Your Name</span>
+              Hi, I'm <span className="text-primary-600">Gökhan Dülger</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-6">
-              Frontend Engineer & UI/UX Designer
+              Project Engineer | Mechanical Engineer
             </p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              I build beautiful, functional web experiences that users love.
-              Passionate about clean code, modern design, and creating impactful digital products.
+              Multidisciplinary Engineer with a strong foundation in mechanical design, software development, and emerging technologies. 
+              Experienced in leading complex projects from concept to implementation, combining analytical problem-solving with hands-on technical expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -108,14 +108,14 @@ const Home = () => {
       <Section title="Skills & Technologies">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            'React',
-            'JavaScript',
-            'TypeScript',
-            'Node.js',
-            'TailwindCSS',
-            'Framer Motion',
-            'Git',
-            'UI/UX Design',
+            'ROS',
+            'SLAM',
+            'LiDAR',
+            'MATLAB',
+            'Simulink',
+            'SolidWorks',
+            'Python',
+            'C/C++',
           ].map((skill, index) => (
             <motion.div
               key={skill}
